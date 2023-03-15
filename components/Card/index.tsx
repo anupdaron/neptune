@@ -1,4 +1,3 @@
-import { type } from "os";
 import React from "react";
 
 type Props = {
@@ -8,7 +7,7 @@ type Props = {
 const Card: React.FC<Props> = (props: Props) => {
   const { children } = props;
   return (
-    <div className=" rounded overflow-hidden shadow-lg px-10 py-5 bg-white w-96">
+    <div className="glass rounded overflow-hidden shadow-lg px-10 py-5 bg-white w-96">
       {children}
     </div>
   );
