@@ -1,23 +1,23 @@
 import { useState } from "react";
-import Card from "../Card";
 import Input from "../Input";
 import { GrPowerCycle } from "react-icons/gr";
 
-type Props = {};
-
-const ConverterForm = (props: Props) => {
+const ConverterForm = () => {
+  // Define state variables to hold the values of NEP and BUSD
   const [nep, setNep] = useState<string | undefined>();
   const [busd, setBusd] = useState<string | undefined>();
 
+  // Handle changes to the NEP input field and convert the value to BUSD
   const handleNepChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const nepValue = e.target.value;
-    setNep(e.target.value);
+    setNep(nepValue);
     setBusd((Number(nepValue) * 3).toFixed(2));
   };
 
+  // Handle changes to the BUSD input field and convert the value to NEP
   const handleBusdChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const busdValue = e.target.value;
-    setBusd(e.target.value);
+    setBusd(busdValue);
     setNep((Number(busdValue) / 3).toFixed(2));
   };
 

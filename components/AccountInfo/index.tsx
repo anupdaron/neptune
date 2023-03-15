@@ -12,7 +12,7 @@ const AccountInfo: React.FC<AccountInfoProps> = ({
   chainId,
 }) => {
   return (
-    <div className="flex flex-col border rounded-lg overflow-hidden my-5">
+    <div className="flex flex-col border rounded-lg overflow-hidden my-5 px-2">
       <table className="table-auto">
         <tbody>
           <tr>
